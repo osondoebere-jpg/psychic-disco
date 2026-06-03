@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Head Lovers Salon</title>
+
+<style>
+    body {
+        margin: 10px;
+        padding: 5px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* --- RESPONSIVE HEADER --- */
+    header {
+        background-color: #000000; 
+        width: 100%;
+        /* CHANGED: Removed fixed height to let contents expand safely on mobile */
+        min-height: 150px; 
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 20px; 
+    }
+
+    .header-icon {
+        height: 120px; /* Scaled down slightly to fit small screens better */
+        width: auto;   
+        object-fit: contain;
+    }
+
+    .center-branding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1; 
+    }
+
+    .header-logo {
+        height: auto;
+        max-height: 100px; 
+        width: 100%;
+        max-width: 300px; /* Prevents the logo image from exploding in size */
+        object-fit: contain;
+    }
+
+    .center-branding p {
+        color: #ffffff; 
+        font-size: 14px; 
+        text-transform: uppercase;
+        letter-spacing: 3px; 
+        margin-top: 10px;
+        text-align: center;
+        line-height: 1.6; /* Adds breathing room if text wraps */
+    }
+
+    /* --- ABOUT US SECTION --- */
+/* --- ABOUT US SECTION --- */
+  .about-us {
+    background-color: #000000;
+    width: 100%;       /* Must be 100% */
+    max-width: 100%;   /* Make sure no max-width pixel limit is overriding it */
+    padding: 80px 0;   /* Use 0 on the left/right so the carousel can touch the edges if needed */
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+}
+
+    .about-us h1 {
+        color: #ffffff; 
+        font-family: Arial, sans-serif;
+        font-size: 42px;          
+        text-transform: uppercase;
+            letter-spacing: 6px; 
+        margin: 0 0 40px 0; /* Extra space below the heading */
+        font-weight: 300;
+    }
+
+/* TARGETING YOUR <p> TAG EXPLICITLY */
+    .about-us p {
+        color: #ffffff; 
+        font-family: Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;          /* Clean, elegant font size that stays crisp on desktop */
+        line-height: 1.8;         /* High-end spacing between sentences */
+    
+/* THE FIX: Hard limits to match your screen alignment goals */
+        max-width: 650px;         /* Locks the paragraph into a beautiful, narrow center column */
+        width: 90%;               /* Prevents edge clipping on mobile devices */
+        margin: 0 auto;           /* Centers the entire text block horizontally */
+    
+        text-align: center;       
+        letter-spacing: 0.5px;
+    }
+
+ /* --- THE CAROUSEL CONTAINER (FULL WIDTH) --- */
+.carousel-container {
+    display: flex;               
+    flex-direction: row;
+    gap: 20px;                   /* Slightly wider gap looks great on big screens */
+    overflow-x: auto;            
+    overflow-y: hidden;          
+    
+    /* THE FIX FOR FULL WIDTH */
+    width: 100%;                 /* Takes up all available horizontal space */
+    max-width: 100%;             /* REMOVED the 800px limit so it stretches completely */
+    padding: 20px 40px;          /* Gives a elegant padding on the far left and right edges */
+    box-sizing: border-box;
+    
+    margin: 0 auto 40px auto;    
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* --- THE IMAGES INSIDE THE CAROUSEL --- */
+.back-image {
+    /* You can make these slightly bigger now that you have more screen space! */
+    width: 280px;                
+    height: 340px;               
+    flex-shrink: 0;              
+    border-radius: 12px;         /* Clean, premium rounded corners */
+    object-fit: cover;           
+    object-position: center;     
+}
+
+/* --- Custom Gold Scrollbar --- */
+.carousel-container::-webkit-scrollbar {
+    height: 6px;                 
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #000000;         
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #d4af37;         /* Gold color thumb */
+    border-radius: 10px;
+}
+
+    /* --- OTHER SECTIONS --- */
+    .services, .meet_team {
+        padding: 30px 10px;
+    }
+
+    .services p {
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    /* --- THE MAGIC MAGIC TRICK: MEDIA QUERY --- */
+    /* When the screen width is 768px or smaller (like tablets and mobile phones) */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column; /* Stacks items vertically */
+            gap: 20px;
+            text-align: center;
+        }
+
+        .header-icon {
+            height: 100px; /* Slightly smaller icon on mobile */
+        }
+    }
+</style>
+
+</head>
+<body>
+
+    <header>
+        <img src="elegant.jpg" alt="Elegant Head Lover's Salon Icon" class="header-icon">
+        
+        <div class="center-branding">
+            <img src="Title.jpg" alt="Elegant Head Lover's Salon Logo" class="header-logo">
+            <p>Home &nbsp;|&nbsp; Menu &nbsp;|&nbsp; Socials &nbsp;|&nbsp; Locations &nbsp;|&nbsp; Contact Us</p>
+        </div>
+    </header>
+
+    <br>
+
+<section class="about-us">
+    <h1>About Us</h1>
+    
+    <div class="carousel-container">
+        <img src="image_1.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_2.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_3.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_4.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="makeup1.jpg" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_6.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_7.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_8.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="install2.jpg" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_10.jpg" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_11.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_12.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="image_13.webp" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="install1.jpg" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="nails1.jpg" alt="Elegant Head Lovers Model." class="back-image">
+        <img src="model1.jpg" alt="Elegant Head Lovers Model." class="back-image">
+        
+        
+        
+    </div>
+
+    <p>
+        Welcome to Elegant Head Lovers Salon, where Elegance Meets Expertise. 
+        <br><br>
+        Conveniently located in the heart of Cape Town CBD, Elegant Head Lovers Salon is your ultimate all-in-one beauty hub. Under the expert direction of Susanne Luyinda, we pride ourselves on delivering premium hair, nail, and makeup services tailored entirely to you.
+        <br><br>
+        Whether you're looking for a fresh install, sleek natural ponytails, flawless lash extensions, professional makeup, or quality grooming for gents and kids, our talented team has you covered. Drop by our vibrant city center space—located perfectly between Clicks and Telkom opposite the train station—and let us treat you to the elegant experience you deserve.
+    </p>
+</section>
+
+    <section class="services">
+        <h2>Services We Offer</h2>
+       
+        <p>
+            <strong>Hair Styling</strong> <br>
+            We perform flawless custom installs, frontals, and sleek natural ponytails, As well as box braids, Knotless braids, cornrows for both Ladies and kids.
+            For the gents, we have our expert barbers on standby, ready to perform miracle cuts and everyday styling tailored just for you.
+        </p>
+
+        <p>
+            <strong>Nail Care and Manicures</strong> <br>
+            Professional manicures, pedicures, and stunning nail art designed to keep your hands and feet looking flawless
+            (in collaboration with our dedicated nail team).
+        </p>
+
+        <p>
+            <strong>Flawless Makeup Application</strong> <br>
+            Professional makeup styling for special events, photography, or when you just want to look and feel your absolute best.
+            Including premium eyelash extensions and brow grooming to frame your face and give you an effortless, wake-up-and-go look.
+        </p>
+       
+        <p>
+            <strong>The VIP Experience</strong> <br>
+            With an added fee, Treat yourself to the ultimate pampering. Enjoy a completely customized, all-in-one beauty package
+            with priority booking, complimentary refreshments, and a private, one-on-one styling session designed to make you feel like royalty.
+        </p>
+    </section>
+
+    <section class="meet_team">
+        <h2>Meet The Team</h2>
+        <p></p>
+    </section>
+
+</body>
+</html>
